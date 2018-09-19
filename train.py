@@ -286,7 +286,7 @@ def main():
     # setting loss
     criterion = FocalLoss(num_classes,args.loss_fn) # nn.CrossEntropyLoss()
 
-    checkpoint = torch.load('../init_weight/net_{}_{}_{}.pt'.format(args.data,args.loss_fn,args.network))
+    checkpoint = torch.load('./init_weight/net_{}_{}_{}.pt'.format(args.data,args.loss_fn,args.network))
     model.load_state_dict(checkpoint)
 
     if use_cuda:
